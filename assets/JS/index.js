@@ -14,7 +14,6 @@ window.addEventListener("DOMContentLoaded", () => {
     //cuando el usuario haga click recibe un elemento e 
     submitBtn.addEventListener("click", (e) => {
         e.preventDefault();//
-
         const checker = new Checker();//nueva clase 
         checker.verifyInput();
     });

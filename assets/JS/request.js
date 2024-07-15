@@ -43,6 +43,7 @@ export default class Request {
             });
         });
 
+        
         Promise.all(result).then(() => {
             const container = document.querySelectorAll(".default-row");//para las tarjetas 
             const display = new Display(moviesInfo, this.template, container);

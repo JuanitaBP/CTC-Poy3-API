@@ -10,7 +10,7 @@ export default class Cards {
             imgArray.push(item);
         }
 
-        const request = new Request();
+        const request = new Request();//nueva classe
         request.getMultipleInfo(imgArray);
     }
 
@@ -20,7 +20,7 @@ export default class Cards {
     }
 
     async getMoviesExample() {
-        const response = await fetch("/exampleDB.json");
+        const response = await fetch("/exampleDB.json"); //cambiar si es necesario
         const json = await response.json();
 
         this.getImages(json);

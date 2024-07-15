@@ -30,7 +30,6 @@ export default class Checker {
         this.displayError(errorContainer);
     }
 
-
     //metodo para mostrar el error 
     displayError(errorContainer) {
         errorContainer.style.display = "block";
@@ -43,6 +42,6 @@ export default class Checker {
             while (errorContainer.firstChild) {
                 errorContainer.firstChild.remove();
             }
-        }, 1500); //el tiempo en milisegundos 
+        }, 1500); //el tiempo en milisegundos  
     }
 }

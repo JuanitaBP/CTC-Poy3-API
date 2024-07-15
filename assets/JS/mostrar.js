@@ -66,6 +66,7 @@ export default class Display {
         }
     }
 
+    
     //obtener la mitdad del arreglo para mostrar en una fila 
     getNewArray(movies) {
         const left = movies;

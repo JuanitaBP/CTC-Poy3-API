@@ -6,6 +6,7 @@ export default class Carousel {
         this.fragment = new DocumentFragment();
     }
 
+    
     //Metodo para mostrar info en el carusel 
     showCarouselInfo() {
         this.carouselCont.forEach((img) => { //forEach para recorrer los contenedores 
