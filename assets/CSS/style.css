@@ -29,10 +29,15 @@ body {
     bottom: 3rem;
     z-index: 10;
   }
+
+.carousel-caption.text-start{
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.78);
+}
   
   .carousel-item {
     height: 32rem;
   }
+
   .carousel-item > img {
     position: absolute;
     top: 0;
