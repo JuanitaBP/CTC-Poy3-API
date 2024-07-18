@@ -18,3 +18,27 @@ window.addEventListener("DOMContentLoaded", () => {
         checker.verifyInput();
     });
 });
+
+
+// window.addEventListener('scroll', function() {
+//     var header = document.getElementById('menuPrin');
+//     if (window.scrollY > 10) {
+//         header.style.backgroundColor = '#ffffff'; /* Cambia a color blanco cuando se haga scroll */
+//     } else {
+//         header.style.backgroundColor = 'transparent'; /* Vuelve a transparente cuando se regrese al inicio */
+//     }
+//   });
+
+
+
+  window.addEventListener('scroll', function() {
+    var menuPrin = document.getElementById('menuPrin');
+    var scrollPosY = window.scrollY;
+  
+    // Cambia el color de fondo del menú al hacer scroll
+    if (scrollPosY > 10) {
+      menuPrin.style.backgroundColor = 'rgba(0, 0, 0, 0.6)'; /* Cambia a color blanco */
+    } else {
+      menuPrin.style.backgroundColor = 'transparent'; /* Vuelve a transparente */
+    }
+  });
