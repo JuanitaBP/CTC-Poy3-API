@@ -29,7 +29,7 @@ export default class Request {
             //retorna un arreglo de promesas 
             return new Promise(async (resolve) => {
                 try {
-                    const url = `http://www.omdbapi.com/?t=${item}&apikey=7a09e7f`; //API
+                    const url = `http://www.omdbapi.com/?t=${item}&apikey=7a09e7f`; //API--> LA KEY ES 7a09e7f
                     const response = await fetch(url);
                     const json = await response.json();
 
