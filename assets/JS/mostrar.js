@@ -12,13 +12,17 @@ export default class Display {
     displayDefaultCards() {
         let moviesImg = this.moviesInfo[0];
         let moviesTitles = this.moviesInfo[1];
+
         let moviesPlots = this.moviesInfo[2];
         let moviesIDs = this.moviesInfo[3];
+
 
         const imgArray = this.getNewArray(moviesImg);
         const titleArray = this.getNewArray(moviesTitles);
         const plotArray = this.getNewArray(moviesPlots);
         const idArray = this.getNewArray(moviesIDs);
+
+
 
         this.container.forEach((row, i) => {
             i === 0 ? (moviesTitles = titleArray[0]) : (moviesTitles = titleArray[1]);
@@ -30,6 +34,7 @@ export default class Display {
                 this.card.children[1].children[0].innerText = moviesTitles[j];
                 this.card.children[1].children[1].innerText = moviesPlots[j];
                 this.card.children[1].children[2].innerText = moviesIDs[j];
+
 
                 this.clone = this.template.cloneNode(true);
                 this.fragment.appendChild(this.clone);
@@ -64,11 +69,14 @@ export default class Display {
         const newCardImg = this.card.children[0];
         const newCardBody = this.card.children[1];
 
+
         newCardImg.setAttribute("src", `${movie.Poster}`);
         newCardBody.children[0].innerText = movie.Title;
         newCardBody.children[1].innerText = movie.Plot;
+
         newCardBody.children[2].innerText = movie.imdbID;
         newCardBody.querySelector('.ver-mas').setAttribute("data-id", movie.imdbID); // Set the data-id attribute
+
     }
 
     clearMovies() {

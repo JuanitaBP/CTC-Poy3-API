@@ -29,8 +29,9 @@ export default class Request {
         const result = moviesName.map((item) => {
             return new Promise(async (resolve) => {
                 try {
-                    const url = `http://www.omdbapi.com/?t=${item}&apikey=7a09e7f`; // API
-                    const response = await fetch(url)
+
+                    const url = `http://www.omdbapi.com/?t=${item}&apikey=7a09e7f`; //API--> LA KEY ES 7a09e7f
+                    const response = await fetch(url);
                     const json = await response.json();
 
                     moviesInfo[0].push(json.Poster);   // Store the poster

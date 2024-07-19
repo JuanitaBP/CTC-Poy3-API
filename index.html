@@ -14,101 +14,122 @@
             integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
             crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./assets/CSS/style.css"/>
-    <!--conectar con estilos-->
 
-    <title>API-PELIS</title>
-</head>
+
+    <!--conectar con estilos-->
+    <link rel="stylesheet" href="./assets/CSS/style.css" />
+    <script
+      src="https://kit.fontawesome.com/22392f0adc.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- icono -->
+    <link
+      rel="shortcut icon"
+      href="img/netflix_logoPEQUE.png"
+      type="image/x-icon"
+    />
+    <title>Nekoflix</title>
+  </head>
+
 
 <body>
 <div class="error-container"></div>
 
-<div class="error"></div>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Encuentra tus películas</a>
-        <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarScroll"
-                aria-controls="navbarScroll"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-        >
+    <div class="error"></div>
+    <header>
+      <nav id="menuPrin" class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <img
+            class="logoNekoPrinci"
+            src="img/netflix_logoPEQUE.png"
+            alt="LogoNekoflix"
+          />
+          <a class="navbar-brand inix" href="#">NEKOFLIX</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
-        </button>
+          </button>
 
-        <div class="collapse navbar-collapse" id="navbarScroll">
+          <div class="collapse navbar-collapse" id="navbarScroll">
             <ul
-                    class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
-                    style="--bs-scroll-height: 100px"
+              class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+              style="--bs-scroll-height: 100px"
             >
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
+              <li class="nav-item">
+                <a class="nav-link active inix" aria-current="page" href="#"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link inix" href="#">Acerca de</a>
+              </li>
             </ul>
 
             <!--formulario izquerdo-->
             <form class="d-flex">
-                <input
-                        class="form-control me-2 my-input"
-                        type="search"
-                        placeholder="Buscar"
-                        aria-label="Search"
-                />
-                <div class="dropdown">
-                    <a
-                            class="btn btn-secondary dropdown-toggle me-2 ml-2"
-                            href="#"
-                            role="button"
-                            id="dropdownMenuLink"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                    >
-                        Buscar Por
-                    </a>
 
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <li class="dropdown-item">
-                            <input
-                                    class="form-control me-2 year-ipt"
-                                    type="search"
-                                    placeholder="Año"
-                                    aria-label="año"
-                            />
-                        </li>
-                        <li class="dropdown-item">
-                            <input
-                                    class="form-control me-2 episode-ipt"
-                                    type="search"
-                                    placeholder="Episodio"
-                                    aria-label="episodio"
-                            />
-                        </li>
-                        <li class="dropdown-item">
-                            <input
-                                    class="form-control me-2 season-ipt"
-                                    type="search"
-                                    placeholder="Temporada"
-                                    aria-label="temporada"
-                            />
-                        </li>
-                    </ul>
-                </div>
+              <input
+                class="form-control me-2 my-input"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+              />
+              <!-- <div class="dropdown">
+                <a
+                  class="btn btn-secondary dropdown-toggle me-2 ml-2"
+                  href="#"
+                  role="button"
+                  id="dropdownMenuLink"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Buscar Por
+                </a>
 
-                <button class="btn btn-success btn-search as" type="submit">
-                    Buscar
-                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li class="dropdown-item">
+                    <input
+                      class="form-control me-2 year-ipt"
+                      type="search"
+                      placeholder="Año"
+                      aria-label="año"
+                    />
+                  </li>
+                  <li class="dropdown-item">
+                    <input
+                      class="form-control me-2 episode-ipt"
+                      type="search"
+                      placeholder="Episodio"
+                      aria-label="episodio"
+                    />
+                  </li>
+                  <li class="dropdown-item">
+                    <input
+                      class="form-control me-2 season-ipt"
+                      type="search"
+                      placeholder="Temporada"
+                      aria-label="temporada"
+                    />
+                  </li>
+                </ul>
+              </div> -->
 
+              <button class="btn btn-search as" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
             </form>
+          </div>
         </div>
-    </div>
-</nav>
+      </nav>
+    </header>
+
 
 <!----------------------------------------------------------------->
 <div id="myCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
@@ -135,25 +156,17 @@
         ></button>
     </div>
 
-    <!----------------------------------------------------------------->
-    <div class="carousel-inner">
-        <div
-                class="carousel-item active"
-                style="background: url('img/logo_NF.gif') no-repeat center center; background-size: cover;"
-        >
-            <div class="container carousel-info"></div>
+
+      <!----------------------------------------------------------------->
+      <div class="carousel-inner">
+        <div class="carousel-item bannerprincipal active">
+          <div class="container carousel-info"></div>
         </div>
-        <div
-                class="carousel-item"
-                style="background: url('./img/pop_img.jpg') no-repeat center center; background-size: cover;"
-        >
-            <div class="container carousel-info"></div>
+        <div class="carousel-item banner1">
+          <div class="container carousel-info"></div>
         </div>
-        <div
-                class="carousel-item"
-                style="background: url('./img/img_2.jpeg') no-repeat center center; background-size: cover;"
-        >
-            <div class="container carousel-info"></div>
+        <div class="carousel-item banner2">
+          <div class="container carousel-info"></div>
         </div>
     </div>
     <!----------------------------------------------------------------->
@@ -186,19 +199,23 @@
     </div>
 </div>
 
-<template class="carousel-template">
-    <div class="carousel-caption text-start">
-        <h1>Todas las películas que buscas</h1>
-        <p>Registrate y podrás guardar una lista de las películas que quieras ver</p>
-        <p><a class="btn btn-lg btn-primary" href="#">Suscribirse</a></p>
-    </div>
-</template>
 
-<template class="error-template">
-    <div
-            class="alert alert-danger alert-error mb-0 alert-dismissible fade show"
-            role="alert"
-    >
+    <template class="carousel-template">
+      <div class="carousel-caption text-start">
+        <h1>Todas las películas en un solo lugar</h1>
+        <p>
+          Regístrate y podrás ver tus películas favoritas sin anuncios, además
+          podrás guardar la lista de las películas que quieras ver
+        </p>
+        <p><a class="btn btn-lg btn-suscribirse" href="#">Suscribirse</a></p>
+      </div>
+    </template>
+
+    <template class="error-template">
+      <div
+        class="alert alert-danger alert-error mb-0 alert-dismissible fade show"
+        role="alert"
+      >
         <button
                 type="button"
                 class="btn-close"
@@ -208,6 +225,9 @@
     </div>
 </template>
 
+    <div id="seccionResultado">
+
+    </div>
 <template class="card-template">
     <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xxl mb-lg-2 mb-sm-2">
         <div class="card border-secondary">
@@ -218,6 +238,7 @@
                 <p class="card-id" style="display: none;"></p>
                 <a href="#" class="btn btn-light ver-mas" data-id="" onclick="loadMovieDetails(event)">Ver Mas</a>
             </div>
+
         </div>
     </div>
 </template>
@@ -238,3 +259,9 @@
 <script src = "assets/JS/scriptCardSelect.js"></script>
 </body>
 </html>
+
+<!-- 
+<i class="fi fi-ss-play"></i> PLAY
+<i class="fi fi-ss-heart"></i> ME ENCANTA
+<i class="fi fi-ss-share"></i> COMPARTIR
+-->

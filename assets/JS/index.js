@@ -28,3 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+  window.addEventListener('scroll', function() {
+    var menuPrin = document.getElementById('menuPrin');
+    var scrollPosY = window.scrollY;
+  
+    // Cambia el color de fondo del menú al hacer scroll
+    if (scrollPosY > 10) {
+      menuPrin.style.backgroundColor = 'rgba(0, 0, 0, 0.6)'; /* Cambia a color blanco */
+    } else {
+      menuPrin.style.backgroundColor = 'transparent'; /* Vuelve a transparente */
+    }
+  });
