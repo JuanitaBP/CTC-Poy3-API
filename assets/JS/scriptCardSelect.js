@@ -42,3 +42,5 @@ function displayMovieDetails(details) {
         </div>
     `;
 }
+
+

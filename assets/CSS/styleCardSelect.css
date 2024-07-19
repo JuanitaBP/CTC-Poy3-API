@@ -295,3 +295,31 @@ img{
         margin-left: 0;
     }
 }
+
+
+.btnVolver {
+    
+    position: fixed;
+  top: 20px;
+  left: 20px
+  ;
+    color: white;
+    background-color: #b11703;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .btnVolver a {
+    /* Estilos adicionales para el enlace dentro del botón */
+    color: #fff; /* Color del texto */
+    text-decoration: none; /* Quita la subraya del enlace */
+    display: inline-block; /* Asegura que el enlace se comporte como bloque en el botón */
+    padding: 10px 20px; /* Relleno interno del enlace */
+  }
+
+  .btnVolver a:hover{
+    color: black;
+  }
+
+
+  

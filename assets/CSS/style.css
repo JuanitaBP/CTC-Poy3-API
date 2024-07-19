@@ -5,7 +5,7 @@ body {
     background-position: center; /* Centra la imagen 
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     /* Puedes agregar otras propiedades como color de fondo de respaldo */
-    background-color: #4d3a66;
+    background-color: #6e5491;
   }
   
   #menuPrin{
@@ -118,3 +118,39 @@ body {
 }
 
 
+.ver-mas{
+  color: white;
+    background-color: #b11703;
+    display: inline-flex;
+    align-items: center;
+}
+
+
+
+/* Estilos para el pie de página */
+.footer {
+  position: relative;
+  width: 100%; /* Ocupa todo el ancho disponible */
+  bottom: 0;  /*Lo ancla al fondo de la página */
+  background-color: #640c0c; /* Color de fondo del pie de página */
+  color: #fff; /* Color del texto */
+  /* text-align: center; */
+  display: flex;
+  
+}
+
+.container {
+
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  padding: 0 20px; /* Relleno interior izquierdo y derecho */
+}
+
+.container p{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cardSelect{
+  position: fixed;
+}
