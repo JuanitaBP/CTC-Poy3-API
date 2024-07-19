@@ -64,7 +64,7 @@ body {
   }
   .bannerprincipal{
     height: 580px;
-    background-image: url(/img/pipoca2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/pipoca2.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -72,7 +72,7 @@ body {
 
   .banner1{
     height: 580px;
-    background-image: url(/img/banner2.2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/banner2.2.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -80,7 +80,7 @@ body {
 
   .banner2{
     height: 580px;
-    background-image: url(/img/banner1.1.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/banner1.1.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -113,3 +113,19 @@ body {
 }
 
 
+
+
+#errorModal{
+background-color: aqua;
+    position: relative;
+    /* Asegura que el contenido no se superponga con el botón de cerrar */
+
+}
+
+.modal-content{
+  background-color: #b11703;
+}
+
+.error{
+  background-color: blue;
+}

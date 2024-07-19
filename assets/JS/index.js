@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const carousel = new Carousel();
 
     carousel.showCarouselInfo();
-    cards.getMoviesExample();
+     cards.getMoviesExample();
 
     //cuando el usuario haga click recibe un elemento e 
     submitBtn.addEventListener("click", (e) => {
@@ -20,16 +20,6 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// window.addEventListener('scroll', function() {
-//     var header = document.getElementById('menuPrin');
-//     if (window.scrollY > 10) {
-//         header.style.backgroundColor = '#ffffff'; /* Cambia a color blanco cuando se haga scroll */
-//     } else {
-//         header.style.backgroundColor = 'transparent'; /* Vuelve a transparente cuando se regrese al inicio */
-//     }
-//   });
-
-
 
   window.addEventListener('scroll', function() {
     var menuPrin = document.getElementById('menuPrin');
@@ -37,7 +27,7 @@ window.addEventListener("DOMContentLoaded", () => {
   
     // Cambia el color de fondo del menú al hacer scroll
     if (scrollPosY > 10) {
-      menuPrin.style.backgroundColor = 'rgba(0, 0, 0, 0.6)'; /* Cambia a color blanco */
+      menuPrin.style.backgroundColor = 'rgba(0, 0, 0, 0.4)'; /* Cambia a color blanco */
     } else {
       menuPrin.style.backgroundColor = 'transparent'; /* Vuelve a transparente */
     }

@@ -20,7 +20,7 @@ export default class Cards {
     }
 
     async getMoviesExample() {
-        const response = await fetch("/exampleDB.json"); //cambiar si es necesario
+        const response = await fetch("server/exampleDB.json"); //cambiar si es necesario
         const json = await response.json();
 
         this.getImages(json);

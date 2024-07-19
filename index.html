@@ -30,7 +30,7 @@
   <body>
     <div class="error-container"></div>
 
-    <div class="error"></div>
+    <!-- <div class="error"></div> -->
     <header>
       <nav id="menuPrin" class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -124,6 +124,35 @@
       </nav>
     </header>
 
+    <!-- Modal -->
+    <div class="modal fade" id="errorModal" aria-labelledby="errorModalLabel">
+      <div class="modal-dialog">
+        <div class="error-container">
+          <div class="modal-header">
+            <h5 class="modal-title" id="errorModalLabel">Error</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="modal-text"></p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!----------------------------------------------------------------->
     <div id="myCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
       <div class="carousel-indicators">
@@ -216,9 +245,7 @@
       </div>
     </template>
 
-    <div id="seccionResultado">
-
-    </div>
+    <div id="seccionResultado"></div>
     <template class="card-template">
       <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xxl mb-lg-2 mb-sm-2">
         <div class="card border-secondary">
@@ -246,3 +273,38 @@
 <i class="fi fi-ss-heart"></i> ME ENCANTA
 <i class="fi fi-ss-share"></i> COMPARTIR
 -->
+
+<!-- {"Title":"Joker",
+"Year":"2019",
+"Rated":"R",
+"Released":"04 Oct 2019",
+"Runtime":"122 min",
+"Genre":"Crime, Drama, Thriller",
+"Director":"Todd Phillips",
+"Writer":"Todd Phillips, Scott Silver, Bob Kane",
+"Actors":"Joaquin Phoenix, Robert De Niro, Zazie Beetz",
+"Plot":"During the 1980s, a failed
+stand-up comedian is driven insane and turns to a life of crime and chaos in
+Gotham City while becoming an infamous psychopathic crime figure.",
+"Language":"English, German",
+"Country":"United States, Canada, Australia",
+"Awards":"Won 2 Oscars. 121 wins & 245 nominations total",
+"Poster":"https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
+"Ratings":
+[{"Source":"Internet Movie Database",
+"Value":"8.4/10"},
+{"Source":"Rotten Tomatoes",
+"Value":"69%"},
+{"Source":"Metacritic",
+"Value":"59/100"}],
+"Metascore":"59",
+"imdbRating":"8.4",
+"imdbVotes":"1,503,840",
+"imdbID":"tt7286456",
+"Type":"movie",
+"DVD":"N/A",
+"BoxOffice":"$335,477,657",
+"Production":"N/A",
+"Website":"N/A",
+"Response":"True"
+} -->

@@ -26,7 +26,8 @@ export default class Display {
             imgArray[i].forEach((movie, i) => {
                 this.card.children[0].setAttribute("src", `${movie}`);
                 this.card.children[1].children[0].innerText = moviesTitles[i];
-
+                // this.card.children[2].children[1].innerText = moviesInfo[i];
+console.log(moviesTitles);
 
                 this.clone = this.template.cloneNode(true);
                 this.fragment.appendChild(this.clone);
@@ -48,7 +49,7 @@ export default class Display {
             this.card.id = `${i}`;
 
             this.assignInfo(movie);
-
+            console.log(movie)
             this.clone = this.template.cloneNode(true);
             this.fragment.appendChild(this.clone);
         });
@@ -64,7 +65,8 @@ export default class Display {
 
         newCardImg.setAttribute("src", `${movie.Poster}`);
         newCardBody.children[0].innerText = movie.Title;
-        newCardBody.children[1].innerText = movie.Plot;
+        newCardBody.children[1].innerText = movie.Year;
+        console.log(newCardBody.children[1].innerText)
     }
 
     clearMovies() {

@@ -6,7 +6,7 @@ export default class Checker {
         const inputValue = document.querySelector(".my-input");
 
         if (inputValue.value === "") {
-            this.getErrorContainer("Debes llenar todos los campos");
+            this.getErrorContainer("Escribe el nombre de una película para buscarlo");
         } else {
             const request = new Request();//nuevo objeto 
             request.getInfo(inputValue.value);
@@ -22,7 +22,7 @@ export default class Checker {
         const errorTemplate = document.querySelector(".error-template").content; //almacena el contenido del template del index
 
         const clone = errorTemplate.cloneNode(true); //clonar el template
-        fragment.appendChild(clone);//pasar la infor 
+        fragment.appendChild(clone);//pasar la información
 
         errorContainer.appendChild(fragment); //insertamos la info al contenedor
 
@@ -45,3 +45,20 @@ export default class Checker {
         }, 1500); //el tiempo en milisegundos  
     }
 }
+
+
+
+//     // Método para mostrar el error en el modal
+//     showErrorModal(errorMsg) {
+//         const modal = new bootstrap.Modal(document.getElementById('errorModal')); // Inicializa el modal de Bootstrap
+//         const modalBody = document.querySelector("#errorModal .modal-text");
+        
+//         modalBody.innerText = errorMsg;
+//         modal.show();
+
+//         setTimeout(() => {
+//             modal.hide();
+//             modalBody.innerText = ""; // Limpia el contenido del modal
+//         }, 1500);
+//     }
+// }
