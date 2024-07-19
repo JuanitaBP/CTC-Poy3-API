@@ -11,24 +11,23 @@ window.addEventListener("DOMContentLoaded", () => {
     carousel.showCarouselInfo();
     cards.getMoviesExample();
 
-    //cuando el usuario haga click recibe un elemento e 
+    //cuando el usuario haga click recibe un elemento e
     submitBtn.addEventListener("click", (e) => {
         e.preventDefault();//
-        const checker = new Checker();//nueva clase 
+        const checker = new Checker();//nueva clase
         checker.verifyInput();
     });
 });
 
-
-// window.addEventListener('scroll', function() {
-//     var header = document.getElementById('menuPrin');
-//     if (window.scrollY > 10) {
-//         header.style.backgroundColor = '#ffffff'; /* Cambia a color blanco cuando se haga scroll */
-//     } else {
-//         header.style.backgroundColor = 'transparent'; /* Vuelve a transparente cuando se regrese al inicio */
-//     }
-//   });
-
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.btn-ver-mas');
+    buttons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const movieId = event.target.getAttribute('data-id');
+            window.location.href = `cardSelect.html?id=${movieId}`;
+        });
+    });
+});
 
 
   window.addEventListener('scroll', function() {

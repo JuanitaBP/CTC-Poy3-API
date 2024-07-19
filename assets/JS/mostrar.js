@@ -8,24 +8,32 @@ export default class Display {
         this.card = this.template.querySelector(".card");
     }
 
-    //metodo que pone las img con sus titulos
+    // Method to display default cards with movie details
     displayDefaultCards() {
         let moviesImg = this.moviesInfo[0];
         let moviesTitles = this.moviesInfo[1];
-        
+
+        let moviesPlots = this.moviesInfo[2];
+        let moviesIDs = this.moviesInfo[3];
 
 
         const imgArray = this.getNewArray(moviesImg);
         const titleArray = this.getNewArray(moviesTitles);
+        const plotArray = this.getNewArray(moviesPlots);
+        const idArray = this.getNewArray(moviesIDs);
 
 
 
         this.container.forEach((row, i) => {
             i === 0 ? (moviesTitles = titleArray[0]) : (moviesTitles = titleArray[1]);
+            i === 0 ? (moviesPlots = plotArray[0]) : (moviesPlots = plotArray[1]);
+            i === 0 ? (moviesIDs = idArray[0]) : (moviesIDs = idArray[1]);
 
-            imgArray[i].forEach((movie, i) => {
+            imgArray[i].forEach((movie, j) => {
                 this.card.children[0].setAttribute("src", `${movie}`);
-                this.card.children[1].children[0].innerText = moviesTitles[i];
+                this.card.children[1].children[0].innerText = moviesTitles[j];
+                this.card.children[1].children[1].innerText = moviesPlots[j];
+                this.card.children[1].children[2].innerText = moviesIDs[j];
 
 
                 this.clone = this.template.cloneNode(true);
@@ -65,6 +73,10 @@ export default class Display {
         newCardImg.setAttribute("src", `${movie.Poster}`);
         newCardBody.children[0].innerText = movie.Title;
         newCardBody.children[1].innerText = movie.Plot;
+
+        newCardBody.children[2].innerText = movie.imdbID;
+        newCardBody.querySelector('.ver-mas').setAttribute("data-id", movie.imdbID); // Set the data-id attribute
+
     }
 
     clearMovies() {
@@ -73,8 +85,7 @@ export default class Display {
         }
     }
 
-    
-    //obtener la mitdad del arreglo para mostrar en una fila 
+    // Method to get new array for displaying in rows
     getNewArray(movies) {
         const left = movies;
         const right = left.splice(0, Math.ceil(left.length / 2));
