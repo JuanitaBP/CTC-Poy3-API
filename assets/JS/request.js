@@ -9,7 +9,7 @@ export default class Request {
     async getInfo(inputValue) {
         try {
             const url = `http://www.omdbapi.com/?s=${inputValue}&apikey=7a09e7f`;
-            const response = await fetch(url);
+            const response = await fetch(url)
             const json = await response.json();
 
             const container = document.querySelector(".new-row");
@@ -22,19 +22,21 @@ export default class Request {
         }
     }
 
+
     //obtener la información de las películas 
-    getMultipleInfo(moviesName) {
-        const moviesInfo = [[], []];//arreglo que guarda las rutas de las img, en el otro los nombres
+    async getMultipleInfo(moviesName) {
+        const moviesInfo = [[], [], [], []]; // Array to store poster, title, plot, and imdbID
         const result = moviesName.map((item) => {
-            //retorna un arreglo de promesas 
             return new Promise(async (resolve) => {
                 try {
-                    const url = `http://www.omdbapi.com/?t=${item}&apikey=7a09e7f`; //API
-                    const response = await fetch(url);
+                    const url = `http://www.omdbapi.com/?t=${item}&apikey=7a09e7f`; // API
+                    const response = await fetch(url)
                     const json = await response.json();
 
-                    moviesInfo[0].push(json.Poster);//guarda el poster
-                    moviesInfo[1].push(json.Title);//guarda el título
+                    moviesInfo[0].push(json.Poster);   // Store the poster
+                    moviesInfo[1].push(json.Title);    // Store the title
+                    moviesInfo[2].push(json.Plot);     // Store the plot
+                    moviesInfo[3].push(json.imdbID);   // Store the IMDb ID
 
                     resolve();
                 } catch (error) {

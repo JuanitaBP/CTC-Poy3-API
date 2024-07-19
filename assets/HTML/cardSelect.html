@@ -2,9 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/x-icon"
+          href="https://cdn.icon-icons.com/icons2/1826/PNG/512/4202092logomovienetflixsocialsocialmediavideo-115596_115705.png">
+
+    <title>Detalles de la Película</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/styleCardSelect.css">
+
 </head>
 <body>
 
+    <div id="resultGrid" class="result-grid"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async function() {
+            const imdbID = localStorage.getItem("imdbID");
+            if (imdbID) {
+                try {
+                    const url = `http://www.omdbapi.com/?i=${imdbID}&apikey=7a09e7f`;
+                    const response = await fetch(url);
+                    const movieDetails = await response.json();
+                    displayMovieDetails(movieDetails);
+                } catch (error) {
+                    console.log("Error fetching movie details:", error);
+                }
+            }
+        });
+
+        function displayMovieDetails(details) {
+            const resultGrid = document.getElementById('resultGrid');
+            resultGrid.innerHTML = `
+                <div class="movie-poster">
+                    <img src="${(details.Poster !== "N/A") ? details.Poster : "image_not_found.png"}" alt="movie poster">
+                </div>
+                <div class="movie-info">
+                    <h3 class="movie-title">${details.Title}</h3>
+                    <ul class="movie-misc-info">
+                        <li class="year">Year: ${details.Year}</li>
+                        <li class="rated">Ratings: ${details.Rated}</li>
+                        <li class="released">Released: ${details.Released}</li>
+                    </ul>
+                    <p class="genre"><b>Genre:</b> ${details.Genre}</p>
+                    <p class="writer"><b>Writer:</b> ${details.Writer}</p>
+                    <p class="actors"><b>Actors: </b>${details.Actors}</p>
+                    <p class="plot"><b>Plot:</b> ${details.Plot}</p>
+                    <p class="language"><b>Language:</b> ${details.Language}</p>
+                    <p class="awards"><b><i class="fas fa-award"></i></b> ${details.Awards}</p>
+                </div>
+            `;
+        }
+    </script>
+<script src="../JS/scriptCardSelect.js"></script>
 </body>
 </html>
